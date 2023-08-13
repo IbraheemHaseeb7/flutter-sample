@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sample/Pages/CreateAccount.dart';
+import 'package:sample/Pages/CustomerLogin.dart';
 import 'package:sample/Pages/Slides.dart';
 import 'package:sample/Widgets/Button.dart';
 import 'package:iconly/iconly.dart';
@@ -81,7 +82,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Slides()),
+                    MaterialPageRoute(
+                        builder: (context) => const CustomerLogin()),
                   );
                 },
                 width: 217,

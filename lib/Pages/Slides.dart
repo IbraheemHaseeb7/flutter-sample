@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:sample/Pages/CreateAccount.dart';
 import 'package:sample/Pages/Email.dart';
+import 'package:sample/main.dart';
 
 class Slides extends StatefulWidget {
   Slides({super.key});
@@ -75,7 +76,8 @@ class _SlidesState extends State<Slides> with TickerProviderStateMixin {
                     color: Colors.grey,
                   ),
                   onPressed: () {
-                    Navigator.pop(context);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (e) => MyHomePage()));
                   },
                   alignment: Alignment.center,
                 ),

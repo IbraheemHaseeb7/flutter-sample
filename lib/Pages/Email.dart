@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:sample/Widgets/Button.dart';
 
-class CreateAcc extends StatefulWidget {
+class Email extends StatefulWidget {
   Function() nextPage;
-  CreateAcc({super.key, required this.nextPage});
+  Email({super.key, required this.nextPage});
 
   @override
-  CreateAccState createState() => CreateAccState();
+  EmailState createState() => EmailState();
 }
 
-class CreateAccState extends State<CreateAcc> {
+class EmailState extends State<Email> {
   FocusNode focus = FocusNode();
 
   @override
@@ -37,7 +37,7 @@ class CreateAccState extends State<CreateAcc> {
     const beforePrefix = Padding(
       padding: EdgeInsets.only(left: 20, right: 5, bottom: 1),
       child: Icon(
-        IconlyLight.profile,
+        IconlyLight.message,
         color: Colors.grey,
         size: 20,
       ),
@@ -45,7 +45,7 @@ class CreateAccState extends State<CreateAcc> {
     const afterPrefix = Padding(
       padding: EdgeInsets.only(left: 20, right: 5, bottom: 1),
       child: Icon(
-        IconlyLight.profile,
+        IconlyLight.message,
         color: Color(0xffFF6154),
         size: 20,
       ),
@@ -66,7 +66,7 @@ class CreateAccState extends State<CreateAcc> {
                 width: screenWidth - 30,
                 padding: const EdgeInsets.only(left: 20, right: 2),
                 child: const Text(
-                  "Ready to create your profile First, what's your name?",
+                  "Let's keep your account secure. What's your backup email?",
                   style: TextStyle(
                       color: Colors.white,
                       fontFamily: "Recoleta",
@@ -80,7 +80,7 @@ class CreateAccState extends State<CreateAcc> {
                 height: 10,
               ),
               const Text(
-                "     This is how you'll appear on Paraiso",
+                "     This is how you'll recover on Paraiso",
                 style: TextStyle(
                     color: Colors.grey,
                     fontFamily: "Recoleta",
@@ -104,7 +104,7 @@ class CreateAccState extends State<CreateAcc> {
                     fillColor: const Color(0xff353535),
                     hintStyle: const TextStyle(
                         color: Colors.grey, fontFamily: "Recoleta"),
-                    hintText: "Enter your full name",
+                    hintText: "Enter your backup email",
                     prefixIcon: focus.hasFocus ? afterPrefix : beforePrefix,
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(27.0),

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sample/Pages/CreateAccount.dart';
+import 'package:sample/Pages/Slides.dart';
 import 'package:sample/Widgets/Button.dart';
+import 'package:iconly/iconly.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,16 +14,13 @@ class MyApp extends StatelessWidget {
   MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xffFF6154)),
         useMaterial3: true,
-        
       ),
       home: MyHomePage(),
-      
     );
   }
 }
@@ -75,12 +73,16 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Button(
+                icon: const Icon(
+                  IconlyLight.arrow_right_2,
+                  color: Color(0xffe5e5e5),
+                ),
                 name: "Get Started",
                 onPressed: () {
-                 Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => CreateAcc()),
-                      );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Slides()),
+                  );
                 },
                 width: 217,
                 margin: const EdgeInsets.only(top: 80))
